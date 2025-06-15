@@ -18,4 +18,40 @@ This project explores India’s census data at the district level using **SQL** 
 
 ## 🧠 SQL Concepts Used
 - Table joins and subqueries  
-- Aggregat
+- Aggregate functions (`SUM`, `ROUND`)  
+- Window functions (`RANK() OVER`)  
+- Derived fields and analytical calculations  
+- Grouping, filtering, and ordering logic  
+
+---
+
+## 🗃️ Database Schema
+
+Two tables were used and joined on the `District` field:
+
+### 🔹 `Data1` (Demographic Metrics)
+| Column       | Description                        |
+|--------------|------------------------------------|
+| `State`      | Name of the state                  |
+| `District`   | Name of the district               |
+| `Sex_Ratio`  | Female-to-male ratio               |
+| `Literacy`   | Literacy rate (%)                  |
+| `Growth`     | Population growth rate (%)         |
+
+### 🔹 `Sheet1` (Population & Area)
+| Column        | Description                      |
+|---------------|----------------------------------|
+| `District`    | District name                    |
+| `State`       | State name                       |
+| `Population`  | Total population                 |
+| `Area_Km2`    | Area in square kilometers        |
+
+---
+
+## 📊 Sample Calculation: Gender Breakdown
+
+Using sex ratio to estimate gender distribution:
+```sql
+-- Female-to-male ratio is given
+Males = Population / (1 + Sex_Ratio)
+Females = Population - Males
