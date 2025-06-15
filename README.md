@@ -1,4 +1,4 @@
-# 🧠 Census Analytics SQL – Insights from India’s District-Level Census Data
+# 🧠 Census Analytics SQL – Insights from India’s Census Data
 
 This project explores India’s census data at the district level using **SQL** to uncover key demographic and social insights. It demonstrates how raw datasets can be transformed into actionable knowledge using advanced SQL queries.
 
